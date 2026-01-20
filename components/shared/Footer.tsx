@@ -10,8 +10,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <Link href="/" className="text-3xl font-bold flex items-center gap-2">
-              <span className="text-primary italic">Pitha&apos;s</span>
-              <span className="text-foreground">Cravings</span>
+              <span className="text-primary">Pitha&apos;s</span>
+              <span className="text-foreground">Craving</span>
             </Link>
             <p className="text-muted-foreground leading-relaxed">
               Preserving the heritage of Bengali winter food. We connect traditional pitha makers 
@@ -26,9 +26,6 @@ const Footer = () => {
               </Link>
               <Link href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                 <Instagram className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <Github className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -56,7 +53,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6">Support</h3>
             <ul className="space-y-4">
-              <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Account</Link></li>
+
               <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Support Center</Link></li>
               <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Feedback</Link></li>
               <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Delivery Area</Link></li>

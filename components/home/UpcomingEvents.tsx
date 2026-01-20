@@ -37,7 +37,7 @@ const UpcomingEvents = () => {
     return () => clearInterval(timer);
   }, [eventDate]);
 
-  const location = "Dhanmondi Lake Side, Road 32, Dhaka";
+  const location = "Shilpokola Academi, Habigan";
   const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location)}`;
 
   return (
@@ -47,7 +47,7 @@ const UpcomingEvents = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500/10 blur-[120px] rounded-full translate-x-1/2 translate-y-1/2" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="mx-auto space-y-12">
           {/* Header */}
           <div className="text-center space-y-4">
             <motion.p 
@@ -59,7 +59,7 @@ const UpcomingEvents = () => {
               Don&apos;t Miss Out
             </motion.p>
             <motion.h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -86,7 +86,7 @@ const UpcomingEvents = () => {
               {/* Left Side: Info */}
               <div className="flex-1 space-y-8 text-center lg:text-left">
                 <div>
-                  <h3 className="text-3xl font-bold text-primary mb-2">Winter Pitha Festival 2026</h3>
+                  <h3 className="text-3xl font-bold text-primary mb-2">Winter Pitha Festival Habiganj 2026</h3>
                   <p className="text-slate-400">Join us for the biggest gathering of traditional pitha makers in the country. Experience over 50 varieties of winter delicacies!</p>
                 </div>
 
@@ -114,7 +114,7 @@ const UpcomingEvents = () => {
 
                 <div className="pt-4 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start text-center lg:text-left">
                   <Button 
-                    className="bg-primary hover:bg-primary/90 rounded-full px-8 py-6 h-auto text-lg w-full sm:w-auto flex items-center gap-2 group"
+                    className="bg-primary hover:bg-primary/90 rounded-full px-6 h-auto text-lg w-full sm:w-auto flex items-center gap-2 group"
                     asChild
                   >
                     <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">

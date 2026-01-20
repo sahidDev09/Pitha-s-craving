@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { ShoppingCart, Menu as MenuIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -13,8 +12,8 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b">
       <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold flex items-center gap-2">
-          <span className="text-primary italic">Pitha&apos;s</span>
-          <span className="text-foreground">Cravings</span>
+          <span className="text-primary">Pitha&apos;s</span>
+          <span className="text-foreground">Craving</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -35,10 +34,7 @@ const Navbar = () => {
             <ShoppingCart className="w-5 h-5" />
             <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
           </button>
-          <div className="hidden md:flex items-center gap-2">
-            <Button variant="ghost" className="text-sm font-medium">Login</Button>
-            <Button className="text-sm font-medium rounded-full bg-primary hover:bg-primary/90">Sign up</Button>
-          </div>
+
           <button className="md:hidden p-2 hover:bg-secondary rounded-full transition-colors" onClick={() => setIsOpen(!isOpen)}>
             <MenuIcon className="w-6 h-6" />
           </button>
@@ -59,10 +55,7 @@ const Navbar = () => {
               <Link href="#menu" className="text-sm font-medium py-2" onClick={() => setIsOpen(false)}>Menu</Link>
               <Link href="#about" className="text-sm font-medium py-2" onClick={() => setIsOpen(false)}>About Us</Link>
               <Link href="#offers" className="text-sm font-medium py-2" onClick={() => setIsOpen(false)}>Offers</Link>
-              <div className="flex flex-col gap-2 pt-2 border-t">
-                <Button variant="ghost" className="justify-center">Login</Button>
-                <Button className="bg-primary hover:bg-primary/90 rounded-full">Sign up</Button>
-              </div>
+
             </div>
           </motion.div>
         )}
