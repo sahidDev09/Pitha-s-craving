@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart, Star } from "lucide-react";
 import { motion } from "framer-motion";
 
-const categories = ["Steamed", "Fried", "Syrup-soaked", "Milk-based"];
+const categories = ["All", "Steamed", "Fried", "Syrup-soaked", "Milk-based"];
 
 const pithas = [
   {
@@ -150,7 +150,7 @@ const PopularItems = () => {
           <div className="w-24 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
 
-        <Tabs defaultValue="Steamed" className="w-full">
+        <Tabs defaultValue="All" className="w-full">
           <div className="flex justify-center mb-16 overflow-x-auto pb-4 scrollbar-hide">
             <TabsList className="bg-white/50 backdrop-blur-sm p-1 rounded-2xl border flex h-auto gap-1">
               {categories.map((cat) => (
@@ -168,11 +168,14 @@ const PopularItems = () => {
           {categories.map((cat) => (
             <TabsContent key={cat} value={cat} className="mt-0">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {pithas.filter(p => p.category === cat || cat === "All").map((pitha) => (
-                  <PithaCard key={pitha.id} pitha={pitha} />
+                {pithas
+                  .filter(p => p.category === cat || cat === "All")
+                  .slice(0, cat === "All" ? 4 : pithas.length)
+                  .map((pitha) => (
+                    <PithaCard key={pitha.id} pitha={pitha} />
                 ))}
                 {/* Visual placeholders for variety if category is empty/few */}
-                {pithas.filter(p => p.category === cat).length === 0 && (
+                {(cat !== "All" && pithas.filter(p => p.category === cat).length === 0) && (
                   <div className="col-span-full py-20 text-center text-muted-foreground">
                     New seasonal items arriving soon in this category!
                   </div>
