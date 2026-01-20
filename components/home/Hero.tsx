@@ -22,9 +22,9 @@ const Hero = () => {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Enjoy <span className="text-primary italic">Traditional</span> <br />
+                Enjoy <span className="text-primary ">Traditional</span> <br />
                 Pitha In Your <br />
-                <span className="text-primary">Winter Life</span>
+                <span className="text-primary">Everyday Life</span>
               </h1>
             </motion.div>
             
